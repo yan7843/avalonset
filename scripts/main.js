@@ -13,7 +13,7 @@ myImage.onclick = function() {
 }
 
   function runindex() {
-    window.location.replace("index.html");    
+    window.location.replace("index.html");
 }
 
   function run1() {
