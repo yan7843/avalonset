@@ -60,7 +60,7 @@ myImage.onclick = function() {
   function back8(){
     var user = JSON.parse(localStorage.getItem("userInfo"))
     if (user[8] === undefined){
-      window.location.replace("index.html");
+      window.location.replace("over.html");
     }
     else{
         window.location.replace("p9.html");
@@ -70,7 +70,7 @@ myImage.onclick = function() {
   function back9(){
     var user = JSON.parse(localStorage.getItem("userInfo"))
     if (user[9] === undefined){
-      window.location.replace("index.html");
+      window.location.replace("over.html");
     }
     else{
         window.location.replace("p10.html");
