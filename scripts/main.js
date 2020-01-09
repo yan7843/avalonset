@@ -16,6 +16,10 @@ myImage.onclick = function() {
     window.location.replace("over.html");
 }
 
+  function runindex() {
+    window.location.replace("index.html");
+}
+
   function run1() {
     window.location.replace("p1.html");    
 }
