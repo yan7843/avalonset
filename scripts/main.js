@@ -2,16 +2,6 @@ var array10 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","奧�
 var array9 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","奧伯倫","忠臣","忠臣","忠臣"]
 var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠臣","忠臣","忠臣"]
 
-var myImage = document.querySelector('img');
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc == 'images/card.jpg') {
-      myImage.setAttribute ('src','images/card2.jpg');
-    } else {
-      myImage.setAttribute ('src','images/card.jpg');
-    }
-}
-
   function runover() {
     window.location.replace("over.html");
 }
