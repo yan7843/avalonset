@@ -2,6 +2,18 @@ var array10 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","奧�
 var array9 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","奧伯倫","忠臣","忠臣","忠臣"]
 var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠臣","忠臣","忠臣"]
 
+  var width=document.documentElement.clientWidth;//獲取螢幕的寬度
+  var height=document.documentElement.clientHeight;//獲取螢幕的高度
+  var bili1=width/750;//螢幕寬度與設計稿寬度的比例（750是設計稿的寬度）
+  var bili2=height/(1336-48);//螢幕高度與設計稿高度的比例(1336是設計稿的高度，其中48是設計稿中含有手機頂部的狀態列，需要去掉，1366-48才是真正需要顯示的東西)
+  var bili=bili1<bili2?bili1:bili2;//寬度的比例和高度的比例進行比較，取值最小的
+  var html = document.querySelector('html');//選擇html節點
+  var rem = 16;//手動設定rem與px的比例；
+  html.style.fontSize = rem + "px";//設定html的預設fontsize為16px。(注意，瀏覽器中最小值為12px，)
+  var __bili=bili/rem;//將比例和rem進行聯絡。
+  document.documentElement.style.setProperty('--bili', __bili+"rem");//設定css中的變數為--bili，值為__bili
+
+
   function runover() {
     window.location.replace("over.html");
 }
@@ -124,9 +136,8 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
 
   function see(){
     var user = JSON.parse(localStorage.getItem("userInfo"))     
-     alert("1家 "+user[0]+"\r"+"2家 "+user[1]+"\r"+"3家 "+user[2]+"\r"+"4家 "+user[3]+"\r"+"5家 "+user[4]+"\r"+"6家 "+user[5]+"\r"+"7家 "+user[6]+"\r"+"8家 "+user[7]+"\r"+"9家 "+user[8]+"\r"+"10家 "+user[9]);
+      alert("1家 "+user[0]+"\r"+"2家 "+user[1]+"\r"+"3家 "+user[2]+"\r"+"4家 "+user[3]+"\r"+"5家 "+user[4]+"\r"+"6家 "+user[5]+"\r"+"7家 "+user[6]+"\r"+"8家 "+user[7]+"\r"+"9家 "+user[8]+"\r"+"10家 "+user[9]);
   }
-
 
 //================================================================================
 
@@ -134,6 +145,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
   function set1() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了'; 
+      input.onclick = run2;
+      var img = document.getElementById('img');
+        if(user[0] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[0] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[0] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[0] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[0] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[0] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[0] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[0] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -307,6 +344,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set2() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了';
+      input.onclick = run3;
+      var img = document.getElementById('img');
+        if(user[1] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[1] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[1] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[1] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[1] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[1] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[1] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[1] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -480,6 +543,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set3() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了'; 
+      input.onclick = run4;
+      var img = document.getElementById('img');
+        if(user[2] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[2] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[2] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[2] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[2] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[2] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[2] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[2] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -653,6 +742,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set4() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了';
+      input.onclick = run5;
+      var img = document.getElementById('img');
+        if(user[3] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[3] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[3] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[3] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[3] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[3] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[3] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[3] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -827,6 +942,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set5() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了';  
+      input.onclick = run6;
+      var img = document.getElementById('img');
+        if(user[4] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[4] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[4] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[4] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[4] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[4] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[4] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[4] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -1001,6 +1142,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set6() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了'; 
+      input.onclick = run7;
+      var img = document.getElementById('img');
+        if(user[5] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[5] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[5] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[5] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[5] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[5] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[5] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[5] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -1174,6 +1341,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set7() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了';
+      input.onclick = run8;
+      var img = document.getElementById('img');
+        if(user[6] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[6] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[6] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[6] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[6] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[6] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[6] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[6] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -1347,6 +1540,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set8() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了'; 
+      input.onclick = back8;
+      var img = document.getElementById('img');
+        if(user[7] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[7] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[7] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[7] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[7] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[7] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[7] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[7] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -1520,6 +1739,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set9() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了'; 
+      input.onclick = back9;
+      var img = document.getElementById('img');
+        if(user[8] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[8] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[8] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[8] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[8] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[8] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[8] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[8] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }
@@ -1693,6 +1938,32 @@ var array8 = ["梅林","派西維爾","魔甘娜","刺客","莫德雷德","忠�
     function set10() {
       var user = JSON.parse(localStorage.getItem("userInfo"))
       var text = document.getElementById("text");
+      var input = document.getElementById('input');
+      input.value = '記住了'; 
+      input.onclick = runover;
+      var img = document.getElementById('img');
+        if(user[9] === "梅林"){
+          img.src = 'images/梅林.jpg';
+        }
+        if(user[9] === "派西維爾"){
+          img.src = 'images/派西維爾.jpg';
+        }
+        if(user[9] === "刺客"){
+          img.src = 'images/刺客.jpg';
+        }
+        if(user[9] === "魔甘娜"){
+          img.src = 'images/魔甘娜.jpg';
+        }
+        if(user[9] === "莫德雷德"){
+          img.src = 'images/莫德雷德.jpg';
+        }
+        if(user[9] === "奧伯倫"){
+          img.src = 'images/奧伯倫.jpg';
+        }
+        if(user[9] === "忠臣"){
+          img.src = 'images/忠臣.jpg';
+        }
+
       if (user[9] === "忠臣"){
         text.innerHTML = "你是忠臣";
       }

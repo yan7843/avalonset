@@ -1,0 +1,26 @@
+:root{
+  --bili:0.027rem;  
+}
+.header{
+  height:calc(var(--bili) * 80);
+}
+
+.t{position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+}
+
+.c{position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+}
+
+.r{position:fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+}
